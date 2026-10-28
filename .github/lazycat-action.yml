@@ -1,0 +1,43 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/application.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: myip
+
+build:
+  toolchains: []
+  run_buildscript: false
+
+images:
+  - id: myip
+    target: service
+    service: myip
+    source: docker.io/jason5ng32/myip
+    channel: stable
+    sort: semver
+    tag_regex: '^v\d+\.\d+\.\d+$'
+    version_regex: '^v(?P<version>\d+\.\d+\.\d+)$'
+    max_tags: 50000
+    max_matching_tags: 50000
+    delivery:
+      mode: mirror
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: MyIP
+    summary: 全能 IP 工具箱，IP 查询、DNS 泄露、连通性测试

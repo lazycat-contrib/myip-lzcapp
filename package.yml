@@ -1,0 +1,18 @@
+package: community.lazycat.app.myip
+version: 8.0.0
+name: MyIP
+description: The best IP toolbox - check IP address, geolocation, DNS leak, WebRTC and connectivity tests
+min_os_version: "1.5.0"
+homepage: https://github.com/jason5ng32/MyIP
+author: jason5ng32
+license: MIT
+permissions:
+  required:
+    - net.internet
+locales:
+  zh:
+    name: MyIP
+    description: IP 工具箱：IP 地址与地理位置查询、DNS 泄露检测、WebRTC 检测、网站可用性测试
+  en:
+    name: MyIP
+    description: The best IP toolbox - check IP address, geolocation, DNS leak, WebRTC and connectivity tests
