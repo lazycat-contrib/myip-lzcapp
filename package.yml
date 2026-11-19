@@ -1,5 +1,5 @@
 package: community.lazycat.app.myip
-version: 8.1.0
+version: 8.2.0
 name: MyIP
 description: The best IP toolbox - check IP address, geolocation, DNS leak, WebRTC and connectivity tests
 min_os_version: "1.5.0"

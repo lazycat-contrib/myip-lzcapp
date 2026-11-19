@@ -5,8 +5,8 @@ application:
     - /
 services:
   myip:
-    # upstream: docker.io/jason5ng32/myip:v8.1.0
-    image: docker.1ms.run/jason5ng32/myip:v8.1.0
+    # upstream: docker.io/jason5ng32/myip:v8.2.0
+    image: docker.1ms.run/jason5ng32/myip:v8.2.0
     healthcheck:
       test: ["CMD-SHELL", "wget -q -O- http://127.0.0.1:18966/ >/dev/null 2>&1 || exit 1"]
       interval: 30s
